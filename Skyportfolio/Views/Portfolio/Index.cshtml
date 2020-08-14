@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Skyportfolio.Models.Portfolio>
+
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+    <div class="grid-container">
+        @foreach (var item in Model)
+        {
+        <div class="grid-item">
+            <a href=@item.Link target="_blank">@item.Link</a><br /><br />
+            <img src=@item.Img alt="img" height="200"><br /><br />
+
+            <h4>@Html.DisplayFor(modelItem => item.Tech)</h4><br />
+            <h3>@item.Title</h3>
+            <br /><br />
+        </div>
+        }
+    </div>

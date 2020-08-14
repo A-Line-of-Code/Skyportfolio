@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Skyportfolio.Models.Blog>
+
+@{
+    ViewData["Title"] = "Record";
+}
+
+<div id="blog-body">
+<table class="table">    
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <h3>@Html.DisplayFor(modelItem => item.Date)</h3>
+            </td>
+            <td>
+               <h3> @Html.DisplayFor(modelItem => item.Cmt)</h3>
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
+</div>
