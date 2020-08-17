@@ -9,11 +9,11 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                <h3>@Html.DisplayFor(modelItem => item.Date)</h3>
+            <td style="color: silver; padding: 0 0 0 2rem;">
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-               <h3> @Html.DisplayFor(modelItem => item.Cmt)</h3>
+               @Html.DisplayFor(modelItem => item.Cmt)
             </td>
             
         </tr>

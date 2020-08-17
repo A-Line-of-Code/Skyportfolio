@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <img src="~/Images/hope1.png" alt="img" width=100%>
-    <header id="sticky">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <div class="navbar-header">
-                    @Html.ActionLink("Portfolio", "Index", "Portfolio", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Record", "Index", "Blog", new { area = "" }, new { @class = "navbar-brand" })
-                    <a class="navbar-brand" href="https://github.com/A-Line-of-Code" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div>
-        @RenderBody()
-    </div>
+    <img id="top-img" src="~/Images/hope1.png" alt="img">
+    <nav id="sticky" class="navbar">       
+        <div class="navbar-links">
+            <ul>
+                <li> @Html.ActionLink("Portfolio", "Index", "Portfolio")</li>
+                <li> @Html.ActionLink("Record", "Index", "Blog")</li>
+                <li><a class="new" href="https://github.com/A-Line-of-Code" target="_blank">GitHub</a></li>
+                
+            </ul>
+        </div>
 
+    </nav>
+    <div>
+        @RenderBody()        
+    </div>
+    
+    
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Skyportfolio
+        
+        <div id="footer-container" class="container">            
+            &copy; portfoliosky
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

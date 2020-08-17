@@ -2,6 +2,41 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;    
+}
+
+
+.navbar-links ul {
+    font-size: 1.5rem;
+    margin: 0 .5rem;    
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover, li:active {
+    background-color: #555;
+}
+
+#top-img {
+    max-width: 100%;
+}
+
+
 @supports (position: sticky) {
     #sticky {
         position: sticky;
@@ -10,15 +45,15 @@ for details on configuring this project to bundle and minify static web assets. 
     }
 }
 
+/*
 a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
 }
-    /* Provide sufficient contrast against white background */
+
     a {
-        /*
-        color: #0366d6;*/
+        
         color: black;
     }
 
@@ -33,17 +68,14 @@ a.navbar-brand {
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
+*/
     /* Sticky footer styles
 -------------------------------------------------- */
     html {
         font-size: 14px;
     }
 
-    @media (min-width: 768px) {
-        html {
-            font-size: 16px;
-        }
-    }
+   
 
     .border-top {
         border-top: 1px solid #e5e5e5;
@@ -71,7 +103,7 @@ a.navbar-brand {
 body {
     /* Margin bottom by footer height */
     margin-top: 30px;
-    margin-bottom: 90px;
+    margin-bottom: 130px;
     font-family: monospace;
 }
 
@@ -91,44 +123,57 @@ body {
     font-size: 20px;
 }
 #blog-body {
+    margin-top: 20px;
     justify-content: center;
-    text-align: center;
     align-items: center;
+    white-space: nowrap;
 }
-    .grid-container {
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(2, 500px);
-        grid-auto-rows: minmax(400px, auto);
-        grid-gap: 20px;
-        text-align: center;
-        align-items: center;  
-        
-    }
+
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5rem;
+    white-space: nowrap;
+}
 
 .grid-item {
-    margin-top:20px;
-    padding: 20px;
-    border: 1px solid #1861ac;
-    background-color: #1861ac;
-    border-radius: 50px 20px;
-    color: white;
+    padding: 0 0 0 9rem;
+    color: #333;
+    white-space: normal;    
 }
 
-td {
-    color: #1861ac;
+table {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    color: #555;
+    white-space: normal;
 }
 
 a, a:hover, a:active {
     color: white;
 }
 
-/*
-a:hover {
-    color: white;
+footer{
+    background-color: #333;
 }
 
-a:active {
-  color: white;
+
+#footer-container {
+    color: silver;
+    margin: 0 1rem;
 }
-  */
+
+@media (min-width: 768px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .grid-item {      
+        padding: 0;
+        font-size: 6px;
+    }
+}
