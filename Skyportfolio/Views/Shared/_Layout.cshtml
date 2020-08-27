@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Skyportfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <img id="top-img" src="~/Images/hope1.png" alt="img">
+    
     <nav id="sticky" class="navbar">       
         <div class="navbar-links">
             <ul>
                 <li> @Html.ActionLink("Portfolio", "Index", "Portfolio")</li>
-                <li> @Html.ActionLink("Record", "Index", "Blog")</li>
-                <li><a class="new" href="https://github.com/A-Line-of-Code" target="_blank">GitHub</a></li>
-                
+                <li> @Html.ActionLink("Work", "Index", "Blog")</li>
+                <li><a class="new" href="https://github.com/A-Line-of-Code" target="_blank">GitHub</a></li>                
             </ul>
         </div>
 

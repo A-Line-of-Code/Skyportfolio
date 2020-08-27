@@ -1,23 +1,80 @@
 ﻿@model IEnumerable<Skyportfolio.Models.Blog>
 
+
 @{
-    ViewData["Title"] = "Record";
+    Layout = null;
 }
 
-<div id="blog-body">
-<table class="table">    
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td style="color: silver; padding: 0 0 0 2rem;">
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-               @Html.DisplayFor(modelItem => item.Cmt)
-            </td>
-            
-        </tr>
-}
-    </tbody>
-</table>
-</div>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/front.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        function cart() {
+            if ($("#child").hasClass("showcart")) {
+                $("#child").removeClass("showcart");
+            }
+            else {
+                $("#child").addClass("showcart");
+            }
+        }
+    </script>
+    <title>Study</title>
+</head>
+<body>
+    <ul>
+        <li><a href="https://portfoliosky.azurewebsites.net/">HOME</a></li>
+        <li><a href="#part1">SHOPPING CART</a></li>
+        <li><a href="#part3">RECORD</a></li>
+    </ul>
+    <br /><br />
+    <h2 id="part1">SHOPPING CART (CSS/jQuery)</h2>
+    <hr />
+    <br />
+    <div id="div-part1">
+        <div id="part1-bg">
+            <div id="part1-nav">
+                <div onclick="cart()" id="cart">click<br />cart</div>
+            </div>
+            <div id="child"></div>
+        </div>
+    </div>
+    <br />
+    <a class="top" href="#">Go to top</a>
+    <br /><br />
+
+    
+
+    <h2 id="part3">RECORD</h2>
+    <hr />
+    <br />
+    <div>
+
+        <div id="blog-body">
+            <table class="table">
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="color: silver; padding: 0 0 0 2rem; font-size: 1.3rem;">
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cmt)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <br />
+    <a class="top" href="#">Go to top</a>
+</body>
+</html>

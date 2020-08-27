@@ -25,6 +25,10 @@ namespace Skyportfolio.Controllers
             return View(await _context.Portfolios.ToListAsync());
         }
 
+        public async Task<IActionResult> Front()
+        {
+            return View();
+        }
         // GET: Portfolio/Details/5
         public async Task<IActionResult> Details(int? id)
         {
